@@ -764,3 +764,25 @@ const superheroes = [
   },
 ];
 //Start your code here
+
+superheroes.forEach(showProduct);
+function showProduct(superhero) {
+  // console.log(superhero);
+  superhero.forEach((hero) => {
+    const template = document.querySelector("template").content;
+    const clone = template.cloneNode(true);
+    clone.querySelector("h1").textcontent = superhero.alias;
+    const parent = document.querySelector("#wrapper");
+    parent.appendChild(clone);
+  });
+
+  // clone.querySelector("p.outfit").textcontext = superhero.outfit;
+  // clone.querySelector("p.mission").textcontext = superhero.mission;
+  // // clone.querySelector("p.powers").textcontext = superhero.powers;
+  // clone.querySelector("p.cape").textcontext = superhero.cape;
+  // clone.querySelector("p.sidekick_name").sidekick_name = superhero.outfit;
+  // clone.querySelector("p.sidekick_cape").sidekick_cape = superhero.outfit;
+  // clone.querySelector("p.enemies").textcontext = superhero.enemies;
+  // clone.querySelector("p.weaknesses").textcontext = superhero.weaknesses;
+  // clone.querySelector("p.id").textcontext = superhero.id;
+}
